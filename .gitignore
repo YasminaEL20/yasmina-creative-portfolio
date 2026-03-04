@@ -1,0 +1,24 @@
+# Node (au cas où tu utilises plus tard)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Build / cache
+dist/
+build/
+
+# Environment files (sécurité)
+.env
+
+# Temporary files
+*.tmp
+*.swp

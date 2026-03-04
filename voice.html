@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice | Yasmina</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background-color:#EBD6DC;
+  color:#3A2A39;
+  overflow-x:hidden;
+}
+
+/* SECTION TITLES */
+.section-title{
+  font-size:2.5rem;
+  font-weight:600;
+  text-align:center;
+  margin-bottom:60px;
+  color:#674D66;
+}
+
+/* GRID */
+.voice-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+
+/* CARD */
+.voice-card{
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(103,77,102,0.2);
+  transition:0.4s ease;
+}
+
+.voice-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  transition:0.6s ease;
+}
+
+.voice-card:hover img{
+  transform:scale(1.08);
+}
+
+/* Overlay */
+.voice-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(103,77,102,0.8),transparent);
+  display:flex;
+  align-items:flex-end;
+  padding:20px;
+}
+
+.voice-overlay h3{
+  color:white;
+  font-size:1.2rem;
+  font-weight:500;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:0.4s ease;
+  z-index:1000;
+}
+
+.modal.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal-box{
+  width:90%;
+  max-width:900px;
+  background:black;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.close{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="py-6">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+
+    <h1 class="text-2xl font-semibold text-[#674D66]">Yasmina</h1>
+
+    <div class="hidden md:flex gap-8 text-sm font-medium items-center">
+      <a href="index.html" class="hover:text-[#674D66] transition">Home</a>
+      <a href="gallery.html" class="hover:text-[#674D66] transition">Gallery</a>
+      <a href="voice.html" class="text-[#674D66]">Voice</a>
+
+      <a href="index.html#contact"
+        class="px-6 py-2 bg-[#674D66] text-white rounded-lg 
+                hover:bg-[#533C52] transition shadow-md">
+        Contact
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- DUBBING SECTION -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="section-title">Dubbing</h2>
+
+  <div class="voice-grid">
+
+    <div class="voice-card" data-video="https://drive.google.com/file/d/1EHg4enCcorvc0McKxZKRQgpqOlSwgaRH/preview">
+      <img src="assets/images/thumbnails/english_dubbing.jpg">
+      <div class="voice-overlay">
+        <h3>English Dubbing</h3>
+      </div>
+    </div>
+
+    <div class="voice-card" data-video="https://drive.google.com/file/d/1HpehILN67pkHcyXLdt4Miho8e60ZLIUU/preview">
+      <img src="assets/images/thumbnails/french_dubbing.jpg">
+      <div class="voice-overlay">
+        <h3>French Dubbing</h3>
+      </div>
+    </div>
+
+    <div class="voice-card" data-video="https://drive.google.com/file/d/1voQRAD85E02z0rdvh90vKueL_ZKGDRD3/preview">
+      <img src="assets/images/thumbnails/arabic_dubbing.jpg">
+      <div class="voice-overlay">
+        <h3>Arabic Dubbing</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VOICE OVER SECTION -->
+<section class="max-w-7xl mx-auto px-6 pb-24">
+  <h2 class="section-title">Voice Over</h2>
+
+  <div class="voice-grid">
+
+    <div class="voice-card" data-video="https://drive.google.com/file/d/1XalZxLGJgEQRxJLh0YoDPS_H2yP-PNH6/preview">
+      <img src="assets/images/thumbnails/english_voice_over.jpg">
+      <div class="voice-overlay">
+        <h3>English Voice Over</h3>
+      </div>
+    </div>
+
+    <div class="voice-card" data-video="https://drive.google.com/file/d/1vWpR2flsPDpJtGpGLb4s9ZxSVSy8EPSc/preview">
+      <img src="assets/images/thumbnails/arabic_voice_over.jpg">
+      <div class="voice-overlay">
+        <h3>Arabic Voice Over</h3>
+      </div>
+    </div>
+
+    <div class="voice-card" data-video="https://drive.google.com/file/d/1vNiDoDel5CrxxS6WMI6ugij8BAqaNCF7/preview">
+      <img src="assets/images/thumbnails/french_voice_over.jpg">
+      <div class="voice-overlay">
+        <h3>French Voice Over</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="close" id="close">&times;</div>
+  <div class="modal-box">
+    <iframe id="video-frame"
+            width="100%"
+            height="500"
+            allow="autoplay"
+            allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<script src="assets/js/voice.js"></script>
+</body>
+</html>
