@@ -92,12 +92,14 @@ body{
 <body>
 
 <!-- NAVBAR -->
-<nav class="py-6 relative">
+<nav class="py-6 relative z-50">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
-    <h1 class="text-xl md:text-2xl font-semibold text-[#674D66]">Yasmina</h1>
+    <h1 class="text-xl md:text-2xl font-semibold text-[#674D66]">
+      Yasmina
+    </h1>
 
-    <!-- Desktop Menu -->
+    <!-- Desktop -->
     <div class="hidden md:flex gap-8 text-sm font-medium items-center">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
@@ -108,24 +110,24 @@ body{
       </a>
     </div>
 
-    <!-- Mobile Button -->
-    <button id="menu-btn" class="md:hidden text-2xl text-[#674D66]">
+    <!-- Mobile button -->
+    <button id="menu-btn" class="md:hidden text-3xl text-[#674D66]">
       ☰
     </button>
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile menu -->
   <div id="mobile-menu"
-       class="hidden md:hidden absolute top-full left-0 w-full bg-[#EBD6DC] shadow-md py-6 text-center space-y-4">
+       class="hidden md:hidden fixed top-0 left-0 w-full h-screen bg-[#EBD6DC] flex flex-col items-center justify-center space-y-8 text-xl font-medium z-40">
 
-    <a href="index.html" class="block">Home</a>
-    <a href="gallery.html" class="block">Gallery</a>
-    <a href="voice.html" class="block">Voice</a>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="voice.html" onclick="closeMenu()">Voice</a>
     <a href="index.html#contact"
-       class="inline-block px-5 py-2 bg-[#674D66] text-white rounded-lg">
+       class="px-6 py-3 bg-[#674D66] text-white rounded-lg"
+       onclick="closeMenu()">
       Contact
     </a>
-
   </div>
 </nav>
 

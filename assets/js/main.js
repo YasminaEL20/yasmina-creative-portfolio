@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ===============================
-     3. SMOOTH SCROLL (FOR CONTACT)
+     3. SMOOTH SCROLL (CONTACT)
   =============================== */
   document.querySelectorAll("a[href^='#']").forEach(anchor => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({
           behavior: "smooth"
         });
@@ -84,13 +84,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeEffect();
 
-});
-// Mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
 
-if(menuBtn){
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-}
+  /* ===============================
+     5. MOBILE MENU
+  =============================== */
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close when clicking a link
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+  }
+
+});
