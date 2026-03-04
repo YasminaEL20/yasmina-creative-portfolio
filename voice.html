@@ -16,20 +16,27 @@ body{
   overflow-x:hidden;
 }
 
-/* SECTION TITLES */
+/* SECTION TITLES RESPONSIVE */
 .section-title{
-  font-size:2.5rem;
   font-weight:600;
   text-align:center;
-  margin-bottom:60px;
+  margin-bottom:40px;
   color:#674D66;
+  font-size:1.8rem;
 }
 
-/* GRID */
+@media(min-width:768px){
+  .section-title{
+    font-size:2.5rem;
+    margin-bottom:60px;
+  }
+}
+
+/* GRID RESPONSIVE */
 .voice-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 
 /* CARD */
@@ -37,16 +44,22 @@ body{
   position:relative;
   cursor:pointer;
   overflow:hidden;
-  border-radius:20px;
-  box-shadow:0 20px 40px rgba(103,77,102,0.2);
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(103,77,102,0.2);
   transition:0.4s ease;
 }
 
 .voice-card img{
   width:100%;
-  height:260px;
+  height:220px;
   object-fit:cover;
   transition:0.6s ease;
+}
+
+@media(min-width:768px){
+  .voice-card img{
+    height:260px;
+  }
 }
 
 .voice-card:hover img{
@@ -60,16 +73,22 @@ body{
   background:linear-gradient(to top,rgba(103,77,102,0.8),transparent);
   display:flex;
   align-items:flex-end;
-  padding:20px;
+  padding:18px;
 }
 
 .voice-overlay h3{
   color:white;
-  font-size:1.2rem;
+  font-size:1rem;
   font-weight:500;
 }
 
-/* MODAL */
+@media(min-width:768px){
+  .voice-overlay h3{
+    font-size:1.2rem;
+  }
+}
+
+/* MODAL RESPONSIVE */
 .modal{
   position:fixed;
   inset:0;
@@ -77,6 +96,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  padding:20px;
   opacity:0;
   visibility:hidden;
   transition:0.4s ease;
@@ -89,20 +109,38 @@ body{
 }
 
 .modal-box{
-  width:90%;
+  width:100%;
   max-width:900px;
   background:black;
   border-radius:20px;
   overflow:hidden;
+  position:relative;
+}
+
+/* Responsive iframe ratio */
+.video-container{
+  position:relative;
+  width:100%;
+  padding-top:56.25%; /* 16:9 */
+}
+
+.video-container iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
 }
 
 .close{
   position:absolute;
-  top:30px;
-  right:40px;
-  font-size:30px;
+  top:15px;
+  right:20px;
+  font-size:28px;
   color:white;
   cursor:pointer;
+  z-index:10;
 }
 </style>
 </head>
@@ -113,15 +151,14 @@ body{
 <nav class="py-6">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
-    <h1 class="text-2xl font-semibold text-[#674D66]">Yasmina</h1>
+    <h1 class="text-xl md:text-2xl font-semibold text-[#674D66]">Yasmina</h1>
 
     <div class="hidden md:flex gap-8 text-sm font-medium items-center">
       <a href="index.html" class="hover:text-[#674D66] transition">Home</a>
       <a href="gallery.html" class="hover:text-[#674D66] transition">Gallery</a>
       <a href="voice.html" class="text-[#674D66]">Voice</a>
-
       <a href="index.html#contact"
-        class="px-6 py-2 bg-[#674D66] text-white rounded-lg 
+         class="px-6 py-2 bg-[#674D66] text-white rounded-lg 
                 hover:bg-[#533C52] transition shadow-md">
         Contact
       </a>
@@ -130,61 +167,49 @@ body{
   </div>
 </nav>
 
-<!-- DUBBING SECTION -->
-<section class="max-w-7xl mx-auto px-6 py-20">
+<!-- DUBBING -->
+<section class="max-w-7xl mx-auto px-6 py-16 md:py-20">
   <h2 class="section-title">Dubbing</h2>
 
   <div class="voice-grid">
 
     <div class="voice-card" data-video="https://drive.google.com/file/d/1EHg4enCcorvc0McKxZKRQgpqOlSwgaRH/preview">
-      <img src="assets/images/thumbnails/english_dubbing.jpg">
-      <div class="voice-overlay">
-        <h3>English Dubbing</h3>
-      </div>
+      <img src="assets/images/thumbnails/english_dubbing.jpg" alt="">
+      <div class="voice-overlay"><h3>English Dubbing</h3></div>
     </div>
 
     <div class="voice-card" data-video="https://drive.google.com/file/d/1HpehILN67pkHcyXLdt4Miho8e60ZLIUU/preview">
-      <img src="assets/images/thumbnails/french_dubbing.jpg">
-      <div class="voice-overlay">
-        <h3>French Dubbing</h3>
-      </div>
+      <img src="assets/images/thumbnails/french_dubbing.jpg" alt="">
+      <div class="voice-overlay"><h3>French Dubbing</h3></div>
     </div>
 
     <div class="voice-card" data-video="https://drive.google.com/file/d/1voQRAD85E02z0rdvh90vKueL_ZKGDRD3/preview">
-      <img src="assets/images/thumbnails/arabic_dubbing.jpg">
-      <div class="voice-overlay">
-        <h3>Arabic Dubbing</h3>
-      </div>
+      <img src="assets/images/thumbnails/arabic_dubbing.jpg" alt="">
+      <div class="voice-overlay"><h3>Arabic Dubbing</h3></div>
     </div>
 
   </div>
 </section>
 
-<!-- VOICE OVER SECTION -->
-<section class="max-w-7xl mx-auto px-6 pb-24">
+<!-- VOICE OVER -->
+<section class="max-w-7xl mx-auto px-6 pb-20 md:pb-24">
   <h2 class="section-title">Voice Over</h2>
 
   <div class="voice-grid">
 
     <div class="voice-card" data-video="https://drive.google.com/file/d/1XalZxLGJgEQRxJLh0YoDPS_H2yP-PNH6/preview">
-      <img src="assets/images/thumbnails/english_voice_over.jpg">
-      <div class="voice-overlay">
-        <h3>English Voice Over</h3>
-      </div>
+      <img src="assets/images/thumbnails/english_voice_over.jpg" alt="">
+      <div class="voice-overlay"><h3>English Voice Over</h3></div>
     </div>
 
     <div class="voice-card" data-video="https://drive.google.com/file/d/1vWpR2flsPDpJtGpGLb4s9ZxSVSy8EPSc/preview">
-      <img src="assets/images/thumbnails/arabic_voice_over.jpg">
-      <div class="voice-overlay">
-        <h3>Arabic Voice Over</h3>
-      </div>
+      <img src="assets/images/thumbnails/arabic_voice_over.jpg" alt="">
+      <div class="voice-overlay"><h3>Arabic Voice Over</h3></div>
     </div>
 
     <div class="voice-card" data-video="https://drive.google.com/file/d/1vNiDoDel5CrxxS6WMI6ugij8BAqaNCF7/preview">
-      <img src="assets/images/thumbnails/french_voice_over.jpg">
-      <div class="voice-overlay">
-        <h3>French Voice Over</h3>
-      </div>
+      <img src="assets/images/thumbnails/french_voice_over.jpg" alt="">
+      <div class="voice-overlay"><h3>French Voice Over</h3></div>
     </div>
 
   </div>
@@ -192,17 +217,15 @@ body{
 
 <!-- MODAL -->
 <div class="modal" id="modal">
-  <div class="close" id="close">&times;</div>
   <div class="modal-box">
-    <iframe id="video-frame"
-            width="100%"
-            height="500"
-            allow="autoplay"
-            allowfullscreen>
-    </iframe>
+    <div class="close" id="close">&times;</div>
+    <div class="video-container">
+      <iframe id="video-frame" allow="autoplay" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 
 <script src="assets/js/voice.js"></script>
+
 </body>
 </html>

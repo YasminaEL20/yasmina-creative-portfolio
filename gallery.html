@@ -15,10 +15,10 @@ body{
   color:#3A2A39;
 }
 
-/* Masonry Layout */
+/* Responsive Masonry */
 .masonry{
   column-count:3;
-  column-gap:24px;
+  column-gap:20px;
 }
 
 @media(max-width:1024px){
@@ -31,7 +31,7 @@ body{
 
 .art-card{
   break-inside:avoid;
-  margin-bottom:24px;
+  margin-bottom:20px;
   cursor:pointer;
   transition:0.4s ease;
 }
@@ -39,15 +39,15 @@ body{
 .art-card img{
   width:100%;
   border-radius:16px;
-  box-shadow:0 15px 30px rgba(103,77,102,0.2);
+  box-shadow:0 10px 25px rgba(103,77,102,0.2);
   transition:0.4s ease;
 }
 
 .art-card:hover img{
-  transform:translateY(-8px);
+  transform:translateY(-6px);
 }
 
-/* MODAL */
+/* MODAL RESPONSIVE */
 .modal{
   position:fixed;
   inset:0;
@@ -56,30 +56,40 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  padding:20px;
   opacity:0;
   visibility:hidden;
   transition:0.4s ease;
   z-index:1000;
 }
+
 .modal.active{
   opacity:1;
   visibility:visible;
 }
+
 .modal-box{
   background:#EBD6DC;
-  width:90%;
-  max-width:1000px;
+  width:100%;
+  max-width:900px;
   border-radius:20px;
-  padding:40px;
+  padding:30px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:30px;
 }
+
+@media(max-width:768px){
+  .modal-box{
+    grid-template-columns:1fr;
+  }
+}
+
 .close{
   position:absolute;
-  top:30px;
-  right:40px;
-  font-size:30px;
+  top:20px;
+  right:25px;
+  font-size:28px;
   color:white;
   cursor:pointer;
 }
@@ -88,42 +98,30 @@ body{
 
 <body>
 
-<!-- NAV -->
 <nav class="py-6">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-
-    <h1 class="text-2xl font-semibold text-[#674D66]">Yasmina</h1>
+    <h1 class="text-xl md:text-2xl font-semibold text-[#674D66]">Yasmina</h1>
 
     <div class="hidden md:flex gap-8 text-sm font-medium items-center">
-      <a href="index.html" class="hover:text-[#674D66] transition">Home</a>
-
-      <a href="gallery.html" class="text-[#674D66]">
-        Gallery
-      </a>
-
-      <a href="voice.html" class="hover:text-[#674D66] transition">Voice</a>
-
-      <!-- CONTACT BUTTON -->
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="text-[#674D66]">Gallery</a>
+      <a href="voice.html">Voice</a>
       <a href="index.html#contact"
-        class="px-6 py-2 bg-[#674D66] text-white rounded-lg 
-                hover:bg-[#533C52] transition shadow-md">
+         class="px-5 py-2 bg-[#674D66] text-white rounded-lg">
         Contact
       </a>
     </div>
-
   </div>
 </nav>
 
-<!-- GALLERY -->
-<section class="max-w-7xl mx-auto px-6 py-16">
-  <h2 class="text-4xl font-semibold text-center mb-14 text-[#674D66]">
+<section class="max-w-7xl mx-auto px-6 py-12 md:py-16">
+  <h2 class="text-2xl md:text-4xl font-semibold text-center mb-10 text-[#674D66]">
     Selected Works
   </h2>
 
   <div id="gallery-grid" class="masonry"></div>
 </section>
 
-<!-- MODAL -->
 <div class="modal" id="modal">
   <div class="close" id="close">&times;</div>
 
@@ -131,14 +129,15 @@ body{
     <div>
       <img id="modal-img" class="rounded-xl shadow-lg w-full object-contain">
     </div>
-    <div class="flex flex-col justify-center space-y-6">
-      <h3 id="modal-title" class="text-3xl font-semibold text-[#674D66]"></h3>
-      <p id="modal-year" class="text-sm uppercase tracking-widest text-[#674D66]"></p>
-      <p id="modal-desc" class="leading-relaxed"></p>
+    <div class="flex flex-col justify-center space-y-4">
+      <h3 id="modal-title" class="text-xl md:text-3xl font-semibold text-[#674D66]"></h3>
+      <p id="modal-year" class="text-xs uppercase tracking-widest text-[#674D66]"></p>
+      <p id="modal-desc" class="leading-relaxed text-sm md:text-base"></p>
     </div>
   </div>
 </div>
 
 <script src="assets/js/gallery.js"></script>
+
 </body>
 </html>

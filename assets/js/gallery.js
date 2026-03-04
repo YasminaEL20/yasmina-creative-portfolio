@@ -2,7 +2,7 @@ const artworks = [
   {
     image: "assets/images/drawings/drawing-01.jpg",
     title: "Whispering Bridge",
-    year: "2023",
+    year: "2025",
     description: `This painting captures a quiet moment in nature where architecture and landscape exist in harmony. A small countryside house rests peacefully behind dense greenery, while an old stone bridge curves gently over a flowing stream.
 
 The movement of the water contrasts with the stillness of the house and the calm blue sky, creating a balanced and serene atmosphere.
@@ -17,7 +17,7 @@ This artwork reflects my appreciation for peaceful rural environments and the si
   {
     image: "assets/images/drawings/drawing-02.jpg",
     title: "Blossom Reflections",
-    year: "2023",
+    year: "2026",
     description: `This painting captures a peaceful moment where nature feels both vibrant and calm. At the center of the scene stands a blooming pink tree beside a gently flowing stream.
 
 The petals fall softly into the water, creating delicate reflections that blend the colors of the blossoms with the movement of the river.
@@ -32,7 +32,7 @@ Through this artwork, I wanted to express the quiet beauty of nature and the fle
   {
     image: "assets/images/drawings/drawing-03.png",
     title: "Golden Desert Harmony",
-    year: "2024",
+    year: "2026",
     description: `This triptych artwork brings together three complementary compositions that explore balance, nature, and abstract form.
 
 Each panel presents a different visual story while sharing a warm color palette dominated by earthy tones and vibrant oranges.
@@ -58,7 +58,7 @@ Through simple lines and soft shading, the artwork emphasizes emotion, mystery, 
   {
     image: "assets/images/drawings/drawing-05.png",
     title: "The Silent Door",
-    year: "2022",
+    year: "2021",
     description: `This pencil drawing represents a quiet architectural scene centered around a wooden door framed by stone bricks.
 
 Through careful shading and line work, the textures of wood, stone, and shadow bring the structure to life.
@@ -71,7 +71,7 @@ The closed door invites the viewer to imagine what lies beyond it.
   {
     image: "assets/images/drawings/drawing-06.jpg",
     title: "Golden Stillness",
-    year: "2023",
+    year: "2024",
     description: `This artwork presents a quiet still-life composition centered on a bouquet of bright yellow flowers arranged in a soft blue vase.
 
 The flowers stand out vividly against the dark background, capturing warmth and elegance.
@@ -82,7 +82,7 @@ The flowers stand out vividly against the dark background, capturing warmth and 
   {
     image: "assets/images/drawings/drawing-07.jpg",
     title: "Mouna",
-    year: "2023",
+    year: "2025",
     description: `This artwork features the name Mouna written in elegant Arabic calligraphy at the center of a circular composition.
 
 Delicate floral patterns and flowing vines create harmony between calligraphy and nature.
@@ -93,7 +93,7 @@ Delicate floral patterns and flowing vines create harmony between calligraphy an
   {
     image: "assets/images/drawings/drawing-08.jpg",
     title: "Siraj",
-    year: "2023",
+    year: "2025",
     description: `This artwork features the name Siraj in bold lettering at the center of a vibrant circular design.
 
 The composition is playful and colorful, decorated with animated characters and floral details.
@@ -104,7 +104,7 @@ The composition is playful and colorful, decorated with animated characters and 
   {
     image: "assets/images/drawings/drawing-09.jpg",
     title: "Rayan",
-    year: "2023",
+    year: "2025",
     description: `This colorful artwork features the name Rayan surrounded by playful cartoon characters and floral elements.
 
 The bright background creates a joyful and lively atmosphere.
@@ -115,7 +115,7 @@ The bright background creates a joyful and lively atmosphere.
   {
     image: "assets/images/drawings/drawing-10.png",
     title: "Blooming Harmony",
-    year: "2024",
+    year: "2026",
     description: `This painting presents a vibrant field of blooming roses in deep pink and soft cream tones.
 
 The contrast between dark green leaves and luminous blossoms brings life and movement.
@@ -126,7 +126,7 @@ The contrast between dark green leaves and luminous blossoms brings life and mov
   {
     image: "assets/images/drawings/drawing-11.jpg",
     title: "Hind",
-    year: "2023",
+    year: "2025",
     description: `This artwork features the name Hind written in elegant Arabic calligraphy at the center of a soft blue circular background.
 
 Floral branches and blossoms create a harmonious decorative frame.
@@ -137,7 +137,7 @@ Floral branches and blossoms create a harmonious decorative frame.
   {
     image: "assets/images/drawings/drawing-12.jpg",
     title: "Abstract Nature Balance",
-    year: "2024",
+    year: "2023",
     description: `This artwork explores harmony between geometric forms and natural elements.
 
 Soft abstract shapes in earthy tones combine with delicate botanical lines.
@@ -159,7 +159,7 @@ The fine lines reflect Islamic architectural elegance.
   {
     image: "assets/images/drawings/drawing-14.jpg",
     title: "Abstract Silhouette",
-    year: "2024",
+    year: "2026",
     description: `This artwork blends abstract shapes with natural elements to create a modern expressive composition.
 
 A face silhouette emerges subtly between vases and botanical forms.

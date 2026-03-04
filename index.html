@@ -37,26 +37,28 @@ body{
   50%{opacity:0}
 }
 
-/* Profile artistic design */
+/* Responsive Artistic Profile */
 .art-wrapper{
   position:relative;
-  width:480px;
-  height:480px;
+  width:100%;
+  max-width:360px;
+  aspect-ratio:1/1;
   display:flex;
   align-items:center;
   justify-content:center;
   animation:float 6s ease-in-out infinite;
+  margin:auto;
 }
 
 @keyframes float{
   0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
+  50%{transform:translateY(-10px);}
 }
 
 .blob{
   position:absolute;
-  width:420px;
-  height:420px;
+  width:100%;
+  height:100%;
   background:linear-gradient(135deg,#F4E1E8,#EBD6DC);
   border-radius:55% 45% 60% 40% / 40% 60% 40% 60%;
   animation:floatBlob 8s ease-in-out infinite;
@@ -69,13 +71,13 @@ body{
 }
 
 .profile-img{
-  width:330px;
-  height:330px;
+  width:75%;
+  aspect-ratio:1/1;
   border-radius:50%;
   overflow:hidden;
   position:relative;
   z-index:3;
-  box-shadow:0 30px 60px rgba(103,77,102,0.25);
+  box-shadow:0 20px 40px rgba(103,77,102,0.25);
   border:4px solid rgba(200,169,106,0.6);
 }
 
@@ -92,7 +94,7 @@ body{
 <!-- NAVBAR -->
 <nav class="py-6">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-    <h1 class="text-2xl font-semibold text-[#674D66]">Yasmina</h1>
+    <h1 class="text-xl md:text-2xl font-semibold text-[#674D66]">Yasmina</h1>
 
     <div class="hidden md:flex gap-8 text-sm font-medium items-center">
       <a href="index.html" class="text-[#674D66]">Home</a>
@@ -107,11 +109,11 @@ body{
 </nav>
 
 <!-- HERO -->
-<section class="min-h-[85vh] flex items-center">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+<section class="min-h-screen flex items-center py-12">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
     <!-- IMAGE -->
-    <div class="flex justify-center reveal">
+    <div class="flex justify-center reveal order-1 md:order-none">
       <div class="art-wrapper">
         <div class="blob"></div>
         <div class="profile-img">
@@ -121,23 +123,23 @@ body{
     </div>
 
     <!-- TEXT -->
-    <div class="space-y-6 reveal">
-      <h2 class="text-3xl font-light">Hello, I'm</h2>
+    <div class="space-y-6 reveal text-center md:text-left">
 
-      <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+      <h2 class="text-lg md:text-3xl font-light">Hello, I'm</h2>
+
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
         Yasmina <span class="text-[#674D66]">El Mansouri</span>
       </h1>
 
-      <h3 class="text-2xl font-medium text-[#674D66] typing" id="typing"></h3>
+      <h3 class="text-lg md:text-2xl font-medium text-[#674D66] typing" id="typing"></h3>
 
-      <p class="text-[#4A3A48] max-w-lg leading-relaxed">
+      <p class="text-[#4A3A48] max-w-md mx-auto md:mx-0 leading-relaxed text-sm md:text-base">
         I am a visual artist and voice performer dedicated to crafting expressive,
         immersive experiences through illustration and multilingual narration.
-        My work bridges emotion and storytelling in English, French, and Arabic.
       </p>
 
       <!-- SOCIAL LINKS -->
-      <div class="flex gap-6 text-[#674D66] text-xl">
+      <div class="flex justify-center md:justify-start gap-6 text-[#674D66] text-xl">
         <a href="https://github.com/YasminaEL20" target="_blank">
           <i class="fab fa-github hover:scale-125 transition"></i>
         </a>
@@ -150,47 +152,50 @@ body{
       </div>
 
       <a href="gallery.html"
-         class="inline-block mt-6 px-8 py-3 bg-[#674D66] text-white rounded-lg hover:bg-[#533C52] transition shadow-md">
+         class="inline-block mt-6 px-6 py-3 bg-[#674D66] text-white rounded-lg hover:bg-[#533C52] transition shadow-md">
          Explore My Work
       </a>
+
     </div>
 
   </div>
 </section>
 
 <!-- TECH PORTFOLIO SECTION -->
-<section class="py-24 text-center bg-[#F4E1E8]">
+<section class="py-16 md:py-24 text-center bg-[#F4E1E8]">
   <div class="max-w-4xl mx-auto px-6 space-y-6 reveal">
-    <h2 class="text-4xl font-bold text-[#674D66]">
+
+    <h2 class="text-2xl md:text-4xl font-bold text-[#674D66]">
       Explore My Technical Portfolio
     </h2>
 
-    <p class="text-lg text-[#4A3A48]">
+    <p class="text-base md:text-lg text-[#4A3A48]">
       Discover my AI projects, embedded systems work, and technical achievements.
     </p>
 
     <a href="cv-portfolio.html"
-       class="inline-block mt-4 px-10 py-4 border-2 border-[#674D66] text-[#674D66]
+       class="inline-block mt-4 px-8 py-3 border-2 border-[#674D66] text-[#674D66]
               rounded-xl hover:bg-[#674D66] hover:text-white transition duration-300">
        View Technical Portfolio
     </a>
+
   </div>
 </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact" class="py-24 bg-[#EBD6DC]">
+<section id="contact" class="py-16 md:py-24 bg-[#EBD6DC]">
   <div class="max-w-4xl mx-auto px-6 text-center space-y-8 reveal">
 
-    <h2 class="text-4xl font-bold text-[#674D66]">
+    <h2 class="text-2xl md:text-4xl font-bold text-[#674D66]">
       Contact Me
     </h2>
 
-    <p class="text-lg text-[#4A3A48]">
-      Feel free to reach out for collaborations, commissions, or professional inquiries.
+    <p class="text-base md:text-lg text-[#4A3A48]">
+      Feel free to reach out for collaborations or professional inquiries.
     </p>
 
     <a href="mailto:yasmina.elmansouri@etu.uae.ac.ma"
-       class="inline-block px-10 py-4 bg-[#674D66] text-white rounded-xl
+       class="inline-block px-8 py-3 bg-[#674D66] text-white rounded-xl
               hover:bg-[#533C52] transition duration-300 shadow-md">
       yasmina.elmansouri@etu.uae.ac.ma
     </a>
@@ -199,7 +204,7 @@ body{
 </section>
 
 <!-- FOOTER -->
-<footer class="py-10 text-center text-sm text-[#674D66] bg-[#F4E1E8]">
+<footer class="py-8 text-center text-sm text-[#674D66] bg-[#F4E1E8]">
   © 2026 Yasmina El Mansouri. All rights reserved.
 </footer>
 
