@@ -32,7 +32,7 @@ Through this artwork, I wanted to express the quiet beauty of nature and the fle
   {
     image: "assets/images/drawings/drawing-03.png",
     title: "Golden Desert Harmony",
-    year: "2026",
+    year: "2026ç ",
     description: `This triptych artwork brings together three complementary compositions that explore balance, nature, and abstract form.
 
 Each panel presents a different visual story while sharing a warm color palette dominated by earthy tones and vibrant oranges.
